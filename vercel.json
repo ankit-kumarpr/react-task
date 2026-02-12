@@ -1,0 +1,5 @@
+{
+    "buildCommand": "npm run build --prefix task",
+    "installCommand": "npm install --prefix task",
+    "outputDirectory": "task/dist"
+}
