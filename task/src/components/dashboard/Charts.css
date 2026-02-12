@@ -1,0 +1,58 @@
+.chart-container {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.chart-container h3 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 1.1rem;
+    color: #334155;
+    font-weight: 600;
+}
+
+/* Activity List Styles */
+.activity-list-custom {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+.activity-date {
+    width: 100px;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.activity-bar-bg {
+    flex: 1;
+    height: 8px;
+    background-color: #f1f5f9;
+    border-radius: 4px;
+    margin: 0 16px;
+    overflow: hidden;
+}
+
+.activity-bar-fill {
+    height: 100%;
+    background-color: #f97316;
+    /* Orange 500 */
+    border-radius: 4px;
+}
+
+.activity-hours {
+    width: 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #334155;
+}

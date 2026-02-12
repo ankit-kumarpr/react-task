@@ -1,0 +1,127 @@
+/* Sidebar Core Styles */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background-color: #1e293b;
+    /* Slate 800 */
+    color: #f8fafc;
+    /* Slate 50 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid #334155;
+    /* Slate 700 */
+}
+
+.sidebar-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #38bdf8;
+    /* Sky 400 */
+    margin: 0;
+}
+
+.close-sidebar {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    display: none;
+    /* Hidden on desktop */
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: 24px 0;
+    overflow-y: auto;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-bottom: 8px;
+    padding: 0 12px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #cbd5e1;
+    /* Slate 300 */
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    background-color: #334155;
+    /* Slate 700 */
+    color: #fff;
+}
+
+.nav-link.active {
+    background-color: #0ea5e9;
+    /* Sky 500 */
+    color: #fff;
+    box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.3);
+}
+
+.nav-icon {
+    margin-right: 12px;
+}
+
+.sidebar-footer {
+    padding: 24px;
+    border-top: 1px solid #334155;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #94a3b8;
+}
+
+/* Overlay for Mobile */
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    backdrop-filter: blur(2px);
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .close-sidebar {
+        display: block;
+    }
+
+    .sidebar-overlay {
+        display: block;
+    }
+}
